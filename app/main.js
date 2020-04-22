@@ -1,23 +1,23 @@
 //var titleField = document.getElementById('title');
-var authorField = document.getElementById('author');
+//var authorField = document.getElementById('author');
+
 var resultTag = document.getElementById('result');
 var bookAPIauthorSearch = 'http://openlibrary.org/search.json?author='
 var bookApiISBNget = 'https://openlibrary.org/api/books?bibkeys=ISBN:'
 var apiFlags = '&jscmd=data&format=json'
 
-function search(bookTitleP = '', authorP = '') {
+function search(bookTitleP = '', authorP = '', isbnP = '') {
 
     resultTag.innerHTML = 'Loading...'
     var output = ''
 
-    if (!issetObj(authorField)) return
-    //var bookTitle = (bookTitleP == '') ? titleField.value : bookTitleP
-    var bookAuthor = (authorP == '') ? authorField.value : authorP
-    if (bookAuthor == '') {
+    
+    var bookTitle = bookTitleP
+    var bookAuthor = authorP
+    if (bookAuthor == '' && bookTitle == '') {
         resultTag.innerHTML = 'Bad parameters!'
         return
     };
-
 
     var authorBetter = capitalizeWords(bookAuthor).replace(/\s/g, '+')
 

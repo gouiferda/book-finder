@@ -26,12 +26,16 @@
                         <label for="author">Author name</label>
                         <input type="text" class="form-control" name="author" id="author" />
                     </div>
-                    <!-- <div class="col-md-6 mb-3">
+                    <div class="col-md-12 mb-3">
                         <label for="title">Book title</label>
                         <input type="text" class="form-control" name="title" id="title"   />
-                    </div> -->
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="title">Book ISBN</label>
+                        <input type="text" class="form-control" name="isbn" id="isbn"   />
+                    </div>
                 </div>
-                <button class="btn btn-dark btn-lg btn-block" onclick="search()">Search</button>
+                <button class="btn btn-dark btn-lg btn-block" onclick="search(document.getElementById('title').value,document.getElementById('author').value,document.getElementById('isbn').value)">Search</button>
 
                 <br class="mb-4">
             </div>
