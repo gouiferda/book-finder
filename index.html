@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="generator" content="">
+    <title>Book finder</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="assets/img/logo.svg" alt="" width="70" height="70">
+            <h4>Book finder</h4>
+            <p class="lead">Find books by author name, or books titles, or both</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4 class="mb-3">Search filters</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="author">Author name</label>
+                        <input type="text" class="form-control" name="author" id="author" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="title">Book title</label>
+                        <input type="text" class="form-control" name="title" id="title"   />
+                    </div>
+                </div>
+                <button class="btn btn-dark btn-lg btn-block" onclick="search()">Search</button>
+
+                <br class="mb-4">
+            </div>
+            <div class="col-md-8">
+                <h4 class="mb-3">Result</h4>
+                <p id="result"></p>
+            </div>
+        </div>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2020</p>
+        </footer>
+    </div>
+    <script src="app/utils.js"> </script>
+    <script src="app/main.js"> </script>
+</body>
+
+</html>
