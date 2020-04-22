@@ -22,14 +22,14 @@
             <div class="col-md-4">
                 <h4 class="mb-3">Search filters</h4>
                 <div class="row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-12 mb-3">
                         <label for="author">Author name</label>
                         <input type="text" class="form-control" name="author" id="author" />
                     </div>
-                    <div class="col-md-6 mb-3">
+                    <!-- <div class="col-md-6 mb-3">
                         <label for="title">Book title</label>
                         <input type="text" class="form-control" name="title" id="title"   />
-                    </div>
+                    </div> -->
                 </div>
                 <button class="btn btn-dark btn-lg btn-block" onclick="search()">Search</button>
 
@@ -37,13 +37,14 @@
             </div>
             <div class="col-md-8">
                 <h4 class="mb-3">Result</h4>
-                <p id="result"></p>
+                <p id="result">Nothing</p>
             </div>
         </div>
         <footer class="my-5 pt-5 text-muted text-center text-small">
             <p class="mb-1">&copy; 2020</p>
         </footer>
     </div>
+    <script src="app/components.js"> </script>
     <script src="app/utils.js"> </script>
     <script src="app/main.js"> </script>
 </body>
