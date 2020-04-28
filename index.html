@@ -1,56 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="generator" content="">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="generator" content="" />
     <title>Book finder</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/custom.css" rel="stylesheet">
-</head>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/custom.css" rel="stylesheet" />
+  </head>
 
-<body class="bg-light">
+  <body class="bg-light">
     <div class="container">
-        <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="assets/img/logo.svg" alt="" width="70" height="70">
-            <h4>Book finder</h4>
-            <p class="lead">Find books by author name, or books titles, or both</p>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <h4 class="mb-3">Search filters</h4>
-                <div class="row">
-                    <div class="col-md-12 mb-3">
-                        <label for="author">Author name</label>
-                        <input type="text" class="form-control" name="author" id="author" />
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <label for="title">Book title</label>
-                        <input type="text" class="form-control" name="title" id="title"   />
-                    </div>
-                    <div class="col-md-12 mb-3">
-                        <label for="title">Book ISBN</label>
-                        <input type="text" class="form-control" name="isbn" id="isbn"   />
-                    </div>
-                </div>
-                <button class="btn btn-dark btn-lg btn-block" onclick="search(document.getElementById('title').value,document.getElementById('author').value,document.getElementById('isbn').value)">Search</button>
-
-                <br class="mb-4">
+        <div class="mt-3"></div>
+      <div class="py-2 text-center">
+          <a href="index.html" >
+            <img
+            class="d-block mx-auto mb-4"
+            src="assets/img/logo.svg"
+            alt=""
+            width="70"
+            height="70"
+          /></a>
+        
+        <h4>Book finder</h4>
+        <p class="lead">Find books by book title, book ISBN, author name</p>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-header text-center">Search filters</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="bookTitle" class="small">Book title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="bookTitle"
+                  placeholder="Book title" 
+                  value=""
+                />
+                <div class="mt-2"></div>
+                <label for="author" class="small">Author name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="author"
+                  placeholder="Author name" 
+                  value=""
+                /><div class="mt-2"></div>
+                <label for="isbn" class="small">ISBN</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="isbn"
+                  placeholder="ISBN" 
+                  value=""
+                />
+              </div>
+              <button
+                class="btn btn-primary btn-lg btn-block"
+                onclick="search()"
+              >
+                Search
+              </button>
             </div>
-            <div class="col-md-9">
-                <h4 class="mb-3">Result</h4>
-                <p id="result">Nothing</p>
-            </div>
+          </div>
         </div>
-        <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy; 2020</p>
-        </footer>
+        <div class="col-md-9">
+          <div class="card mb-3">
+            <div class="card-header text-center">Search results<span id="resultCount"></span></div>
+            <div class="card-body">
+              <span id="result">
+                <img
+          class="d-block mx-auto mb-4"
+          src="assets/img/placeholder.svg"
+          alt=""
+          width="300"
+          height="300"
+        />
+              </span>
+            </div>
+          </div>
+          <br class="mb-1" />
+        </div>
+      </div>
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2020</p>
+      </footer>
     </div>
-    <script src="app/components.js"> </script>
-    <script src="app/utils.js"> </script>
-    <script src="app/main.js"> </script>
-</body>
-
+    <script src="app/components.js"></script>
+    <script src="app/utils.js"></script>
+    <script src="app/search.js"></script>
+    <script src="app/main.js"></script>
+  </body>
 </html>
