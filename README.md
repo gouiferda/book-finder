@@ -6,7 +6,7 @@ Simple front end app to find books by book title, book ISBN, author name, made w
 ## To do
 - Search for authors
 - Show other fields: rating, popularity, genres, other books of same author, links...
+- Pagination
 - More APIs
-- Export to Excel,CSV with custom export fields
-- Import list to search
-- Bookmark books
+- Export to Excel,CSV with custom export fields, and Import list to search
+- Bookmarking

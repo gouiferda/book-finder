@@ -1,11 +1,14 @@
 var resultTag = document.getElementById('result');
 var resultCount = document.getElementById('resultCount');
+//var loadingText = '<br><p class="text-center">Loading...</p><br>'
+var loadingText = '<br><div class="text-center"><img src="assets/img/loader2.gif"></div><br>'
+
 
 function searchBooksList(bookP = "", authorP = "") {
   var bookAPISearch = "https://openlibrary.org/search.json?";
   var apiFlags = "&jscmd=data&format=json";
 
-  resultTag.innerHTML = "Loading...";
+  resultTag.innerHTML = loadingText;
   var output = "";
 
   var bookTitle = bookP;
@@ -74,7 +77,7 @@ var bookApiISBNget = 'https://openlibrary.org/api/books?bibkeys=ISBN:'
 
   var apiFlags = "&jscmd=data&format=json";
 
-  resultTag.innerHTML = "Loading...";
+  resultTag.innerHTML = loadingText;
 
 
   var linkAPI = "";

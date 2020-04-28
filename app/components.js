@@ -9,9 +9,10 @@ function getBlock(className, content) {
 function getBooksTable(books) {
   var currentBookIsbn = "N/A";
   var contentText = "";
+
   contentText += '<div class="table-responsive">';
   contentText += '<table class="table table-sm table-bordered">';
-  contentText += '<thead class="thead-dark">';
+  contentText += '<thead class="text-center">';
   contentText += "<tr>";
   //contentText += "<th>ID</th>";
   contentText += "<th>Title</th>";
@@ -105,8 +106,8 @@ function getBookDetailsTable(dataBook) {
 
   var contentText = "";
   contentText += '<div class="table-responsive">';
-  contentText += '<table class="table table-sm table-bordered">';
-  contentText += '<thead class="thead-dark">';
+  contentText += '<table class="table table-sm table-bordered table-bordered">';
+  contentText += '<thead class="text-center">';
   contentText += "<tr>";
   contentText += "<th>Details</th>";
   contentText += "<th>Info</th>";
@@ -135,7 +136,7 @@ function getBookDetailsTable(dataBook) {
   contentText += "</tr>";
   contentText += "<tr>";
   contentText += "<td>Cover</td>";
-  contentText += '<td><img class="img-fluid" src="'+bookCover+'" /></td>';
+  contentText += '<td><img class="img-fluid rounded" src="'+bookCover+'" /></td>';
   contentText += "</tr>";
   contentText += "</tbody>";
   contentText += "</table>";
