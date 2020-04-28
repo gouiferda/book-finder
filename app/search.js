@@ -2,7 +2,7 @@ var resultTag = document.getElementById('result');
 var resultCount = document.getElementById('resultCount');
 
 function searchBooksList(bookP = "", authorP = "") {
-  var bookAPISearch = "http://openlibrary.org/search.json?";
+  var bookAPISearch = "https://openlibrary.org/search.json?";
   var apiFlags = "&jscmd=data&format=json";
 
   resultTag.innerHTML = "Loading...";
