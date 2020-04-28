@@ -1,7 +1,7 @@
 var resultTag = document.getElementById('result');
 var resultCount = document.getElementById('resultCount');
 //var loadingText = '<br><p class="text-center">Loading...</p><br>'
-var loadingText = '<br><div class="text-center"><img src="assets/img/loader2.gif"></div><br>'
+var loadingText = '<br><div class="text-center"><img src="assets/img/loader2.gif" height="100" width="100"></div><br>'
 
 
 function searchBooksList(bookP = "", authorP = "") {
