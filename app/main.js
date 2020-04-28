@@ -1,3 +1,24 @@
+var bookTitleTag = document.getElementById("bookTitle");
+var authorTag = document.getElementById("author");
+var isbnTag = document.getElementById("isbn");
+
+
+
+function enterEv(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    search();
+  }
+}
+
+bookTitleTag.addEventListener("keyup", enterEv);
+authorTag.addEventListener("keyup", enterEv);
+isbnTag.addEventListener("keyup", enterEv);
+
+var resultTag = document.getElementById("result");
+var resultCountTag = document.getElementById("resultCount");
+
+//params
 
 var authorGet = findGetParameter("a");
 var isbnGet = findGetParameter("i");

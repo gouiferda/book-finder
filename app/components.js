@@ -25,7 +25,7 @@ function getBooksTable(books) {
   var authorName = "N/A";
   //console.log("books: " + books.length);
 
-  resultCount.innerHTML = ' (Found '+books.length+' books)'
+  resultCountTag.innerHTML = ' (Found '+books.length+' books)'
 
   for (var i = 0; i < books.length; i++) {
     currentBook = books[i];

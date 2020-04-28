@@ -1,5 +1,4 @@
-var resultTag = document.getElementById('result');
-var resultCount = document.getElementById('resultCount');
+
 //var loadingText = '<br><p class="text-center">Loading...</p><br>'
 var loadingText = '<br><div class="text-center"><img src="assets/img/loader2.gif" height="100" width="100"></div><br>'
 
@@ -101,14 +100,12 @@ var bookApiISBNget = 'https://openlibrary.org/api/books?bibkeys=ISBN:'
 
 function search()
 {
-    var bookTitle = document.getElementById('bookTitle').value
-    var author = document.getElementById('author').value
-    var isbn = document.getElementById('isbn').value
+   
 
-    if (isbn != '')
+    if (isbnTag.value != '')
     {
-        searchBookDetails(isbn)
+        searchBookDetails(isbnTag.value)
     }else{
-        searchBooksList(bookTitle,author)
+        searchBooksList(bookTitleTag.value,authorTag.value)
     }
 }
