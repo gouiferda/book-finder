@@ -1,7 +1,6 @@
-
 //var loadingText = '<br><p class="text-center">Loading...</p><br>'
-var loadingText = '<br><div class="text-center"><img src="assets/img/loader.gif" height="100" width="100"></div><br>'
-
+var loadingText =
+  '<br><div class="text-center"><img src="assets/img/loader.gif" height="100" width="100"></div><br>';
 
 function searchBooksList(bookP = "", authorP = "") {
   var bookAPISearch = "https://openlibrary.org/search.json?";
@@ -68,16 +67,12 @@ function searchBooksList(bookP = "", authorP = "") {
   });
 }
 
-function searchBookDetails(bookISBN= "")
-{
-
-var bookApiISBNget = 'https://openlibrary.org/api/books?bibkeys=ISBN:'
-
+function searchBookDetails(bookISBN = "") {
+  var bookApiISBNget = "https://openlibrary.org/api/books?bibkeys=ISBN:";
 
   var apiFlags = "&jscmd=data&format=json";
 
   resultTag.innerHTML = loadingText;
-
 
   var linkAPI = "";
 
@@ -91,21 +86,15 @@ var bookApiISBNget = 'https://openlibrary.org/api/books?bibkeys=ISBN:'
       resultTag.innerHTML = "No result";
       return;
     }
-    
+
     resultTag.innerHTML = getBookDetailsTable(data);
-
   });
-
 }
 
-function search()
-{
-   
-
-    if (isbnTag.value != '')
-    {
-        searchBookDetails(isbnTag.value)
-    }else{
-        searchBooksList(bookTitleTag.value,authorTag.value)
-    }
+function search() {
+  if (isbnTag.value != "") {
+    searchBookDetails(isbnTag.value);
+  } else {
+    searchBooksList(bookTitleTag.value, authorTag.value);
+  }
 }

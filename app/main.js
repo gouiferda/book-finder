@@ -23,18 +23,18 @@ var isbnGet = findGetParameter("i");
 var titleGet = findGetParameter("t");
 
 if (issetObj(isbnGet)) {
-    isbnTag.value=isbnGet
+  //  isbnTag.value=isbnGet
   searchBookDetails(isbnGet);
 } else {
   if (issetObj(authorGet) && issetObj(titleGet)) {
-    bookTitleTag.value=revArgName(titleGet)
-    authorTag.value=revArgName(authorGet);
+    bookTitleTag.value = revArgName(titleGet);
+    authorTag.value = revArgName(authorGet);
     searchBooksList(titleGet, authorGet);
   } else if (issetObj(authorGet) && !issetObj(titleGet)) {
-    authorTag.value=revArgName(authorGet);
+    authorTag.value = revArgName(authorGet);
     searchBooksList("", authorGet);
   } else if (!issetObj(authorGet) && issetObj(titleGet)) {
-    bookTitleTag.value=revArgName(titleGet);
+    bookTitleTag.value = revArgName(titleGet);
     searchBooksList(titleGet, "");
   }
 }
